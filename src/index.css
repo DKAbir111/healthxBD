@@ -27,10 +27,22 @@ body {
 
 }
 
+.btn-secondary {
+
+  background: rgb(8, 168, 246);
+  background: linear-gradient(180deg, rgba(8, 168, 246, 1) 0%, rgba(8, 168, 246, 1) 51%, rgba(242, 242, 242, 1) 100%);
+}
 
 .btn-primary:hover {
   background: rgb(133, 168, 235);
   background: linear-gradient(180deg, rgba(133, 168, 235, 1) 0%, rgba(32, 96, 165, 1) 50%, rgba(133, 168, 235, 1) 100%);
+  transition-duration: .3s;
+}
+
+.btn-secondary:hover {
+  background: rgb(242, 242, 242);
+  background: linear-gradient(180deg, rgba(242, 242, 242, 1) 0%, rgba(8, 168, 246, 1) 51%, rgba(8, 168, 246, 1) 100%);
+  transition-duration: 1s;
 }
 
 a {
