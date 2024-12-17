@@ -1,0 +1,144 @@
+.doctors-container {
+    padding: 3rem 5rem;
+    text-align: center;
+    background-color: #f8faff;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header .subheading {
+    color: #4aa8f0;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.header .main-heading {
+    font-size: 2.5rem;
+    color: #00254b;
+}
+
+.header .description {
+    font-size: 1rem;
+    color: #5f6c80;
+
+    width: 50%;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgb(241, 240, 240);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.doctor-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+    background-color: #f8f9fe;
+}
+
+.doctor-name {
+    color: #00254b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+}
+
+.doctor-specialty {
+    color: #5f6c80;
+    background-color: #f8f9fe;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.patients {
+    font-size: 1rem;
+    color: #5f6c80;
+}
+
+.hospital {
+    font-size: 0.9rem;
+    color: #9aa5b1;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0px;
+    align-items: start;
+    gap: 5px;
+}
+
+.footer p {
+    color: #5f6c80;
+    font-size: 1rem;
+}
+
+.medicine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.explore-link {
+    color: #4aa8f0;
+    text-decoration: none;
+}
+
+.explore-link:hover {
+    text-decoration: underline;
+}
+
+.explore {
+    margin-top: 80px;
+    border-bottom: 1px solid rgb(217, 211, 211);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-footer {
+    border: 1px solid rgb(217, 211, 211);
+    width: 50%;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: absolute;
+    background-color: #f8f9fe;
+}

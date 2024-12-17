@@ -2,6 +2,7 @@ import doctorImage from '../../assets/Doctor.png'
 import './ChooseUs.css'
 import cross from '../../assets/cross.png'
 import logo from '../../assets/logo-2.png'
+import ChooseUsCard from './ChooseUsCard'
 export default function ChooseUs() {
     return (
         <div className="choose-container">
@@ -16,40 +17,22 @@ export default function ChooseUs() {
                 </h1>
 
                 <div className="service">
-                    <div className="service-item">
-                        <div className="number-circle">01</div>
-                        <div className="service-text">
-                            <h3>Compassionate & Expert Care</h3>
-                            <p>
-                                Our team of dedicated healthcare professionals combines years of
-                                experience with a genuine commitment to providing.
-                            </p>
-                        </div>
-                    </div>
+                    <ChooseUsCard number={'01'} title={'Compassionate & Expert Care'} description={'Our team of dedicated healthcare professionals combines years of experience with a genuine commitment to providing.'} />
+                    <ChooseUsCard
+                        number={'02'}
+                        title={'Patient-Centered Approach'}
+                        description={
+                            'Your health and well-being are our top priorities. We take the time to listen to your concerns, answer your questions.'
+                        }
+                    />
+                    <ChooseUsCard
+                        number={'03'}
+                        title={'Personalized Treatment Plans'}
+                        description={
+                            'We understand that every patient is unique, and their healthcare needs may vary. That\'s why we create individualized treatment.'
+                        }
+                    />
 
-                    <div className="service-item">
-                        <div className="number-circle">02</div>
-                        <div className="service-text">
-                            <h3>Patient-Centered Approach</h3>
-                            <p>
-                                Your health and well-being are our top priorities. We take the time
-                                to listen to your concerns, answer your questions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="service-item">
-                        <div className="number-circle">
-                            03
-                        </div>
-                        <div className="service-text">
-                            <h3>Personalized Treatment Plans</h3>
-                            <p>
-                                We understand that every patient is unique, and their healthcare needs
-                                may vary. That&apos;s why we create individualized treatment.
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </div>
 
