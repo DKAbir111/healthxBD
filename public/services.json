@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Internal Medicine",
+        "image": "https://i.ibb.co.com/nL82zdL/service-card-1-svg.png",
+        "doctors": 12
+    },
+    {
+        "id": 2,
+        "title": "Dental Care",
+        "image": "https://i.ibb.co.com/5k6Qn06/service-card-2-svg.png",
+        "doctors": 8
+    },
+    {
+        "id": 3,
+        "title": "Urology Care",
+        "image": "https://i.ibb.co.com/XJh1m3W/service-card-3-svg.png",
+        "doctors": 10
+    },
+    {
+        "id": 4,
+        "title": "Neurology Care",
+        "image": "https://i.ibb.co.com/FHrw4Gq/service-card-4-svg.png",
+        "doctors": 6
+    },
+    {
+        "id": 5,
+        "title": "Gynecologists",
+        "image": "https://i.ibb.co.com/rGkgw7G/service-card-5-svg.png",
+        "doctors": 7
+    },
+    {
+        "id": 6,
+        "title": "Ophthalmology",
+        "image": "https://i.ibb.co.com/p0rDTwS/service-card-6-svg.png",
+        "doctors": 9
+    },
+    {
+        "id": 7,
+        "title": "Orthopedics",
+        "image": "https://i.ibb.co.com/fk0vDzQ/service-card-7-svg.png",
+        "doctors": 11
+    },
+    {
+        "id": 8,
+        "title": "Cardiology",
+        "image": "https://i.ibb.co.com/QMzK1Y8/service-card-8-svg-fill.png",
+        "doctors": 15
+    }
+]
