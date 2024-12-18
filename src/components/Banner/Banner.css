@@ -1,6 +1,10 @@
+/* General Banner Wrapper */
 .banner-wrapper {
     background: rgb(8, 168, 246);
-    background: linear-gradient(90deg, rgba(8, 168, 246, 0.1503195028011205) 0%, rgba(150, 198, 222, 0.29037552521008403) 51%, rgba(248, 250, 255, 1) 100%);
+    background: linear-gradient(90deg,
+            rgba(8, 168, 246, 0.15) 0%,
+            rgba(150, 198, 222, 0.29) 51%,
+            rgba(248, 250, 255, 1) 100%);
     padding-top: 80px;
     padding-bottom: 40px;
     position: relative;
@@ -8,9 +12,14 @@
 
 .banner-container {
     max-width: 1300px;
-    margin: 0px auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+/* Left Banner */
 .left-banner {
     width: 50%;
     display: flex;
@@ -19,12 +28,14 @@
 }
 
 .sub-title {
-    color: #1BB4FB;
+    color: #1bb4fb;
+    font-size: 1.2rem;
 }
 
 .banner-title {
     font-size: 4rem;
     font-weight: 500;
+    line-height: 1.2;
 }
 
 .highlight {
@@ -33,24 +44,40 @@
 
 .section-content {
     color: #788094;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 .banner-button {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
-/* sub banner */
+/* Right Image */
+.image-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sub Banner Section */
 .sub-banner-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .sub-banner {
-    padding: 30px 20px;
-    width: 80%;
-    margin: 0px auto;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(189, 184, 184);
     display: grid;
@@ -60,7 +87,15 @@
     align-items: center;
     position: absolute;
     bottom: -60px;
+}
 
+/* Search Input */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ebe8e8;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .banner-input {
@@ -69,7 +104,12 @@
     flex: 1;
     font-size: 16px;
     color: #7b7a7a;
+}
 
+.search-icon {
+    margin-right: 8px;
+    color: #888;
+    font-size: 18px;
 }
 
 .banner-search {
@@ -77,19 +117,99 @@
     justify-content: end;
 }
 
-.search-container {
+.banner-search button {
     display: flex;
     align-items: center;
-    border: 1px solid #ebe8e8;
-    border-radius: 10px;
-    padding: 5px;
-    max-width: 400px;
+    gap: 5px;
+    padding: 8px 15px;
 }
 
-.search-icon {
-    margin-right: 8px;
-    color: #888;
-    background-color: white;
-    font-size: 18px;
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .banner-title {
+        font-size: 3rem;
+    }
 
+    .left-banner,
+    .image-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-banner {
+        align-items: center;
+    }
+
+    .sub-banner {
+        grid-template-columns: 1fr 1fr;
+        bottom: -40px;
+        width: 95%;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 2.5rem;
+    }
+
+    .sub-title {
+        font-size: 1rem;
+    }
+
+    .section-content {
+        font-size: 1rem;
+    }
+
+    .banner-button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sub-banner {
+        grid-template-columns: 1fr;
+        bottom: -20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .sub-title {
+        font-size: 0.9rem;
+    }
+
+    .banner-wrapper {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .banner-button {
+        gap: 5px;
+    }
+
+    .sub-banner {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 10px;
+        position: static;
+    }
+
+    .banner-search {
+        justify-content: center;
+    }
+
+    .search-container {
+        flex-direction: column;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .search-icon {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
 }
