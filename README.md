@@ -17,3 +17,5 @@ A responsive and modern landing page designed for **HealthX**, a medical doctor 
 - **CSS**  
 - **React Router DOM**  
 - **React Icons**  
+
+# Live link: https://cosmic-kelpie-b15094.netlify.app/
