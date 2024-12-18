@@ -24,6 +24,14 @@ export default function Service() {
                     data.map(datum => <ServiceCard key={datum.id} datum={datum} />)
                 }
             </div>
+            <div className="explore" >
+                <p className="section-footer" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    You Get Our 20+ More services...{" "}
+                    <a href="#" className="explore-link">
+                        Explore All Services
+                    </a>
+                </p>
+            </div>
         </section>
     )
 }

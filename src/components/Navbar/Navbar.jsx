@@ -1,40 +1,62 @@
-import { Link } from 'react-router-dom'
-import logo from '../../assets/logo.png'
-import './Navbar.css'
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import logo from "../../assets/logo.png";
+import "./Navbar.css";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { FiMenu, FiX } from "react-icons/fi"; // Menu and Close icons
+
 export default function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
-        <div className='container'>
-            <nav className='flex nav-bar'>
+        <div className="container">
+            <nav className="flex nav-bar">
+                {/* Logo */}
                 <div>
-                    <img src={logo} alt="Logo of Health x" className='logo' />
+                    <img src={logo} alt="Logo of Health x" className="logo" />
                 </div>
-                <ul className='flex nav-link'>
+
+                {/* Hamburger Menu Icon */}
+                <div className="hamburger" onClick={toggleMenu}>
+                    {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+                </div>
+
+                {/* Navigation Links */}
+                <ul className={`nav-link flex ${menuOpen ? "active" : ""}`}>
                     <li>
-                        <Link>   Find Doctors</Link>
+                        <Link to="/">Find Doctors</Link>
                     </li>
-                    <li><Link> Hospitals</Link> </li>
                     <li>
-                        <Link>About Us</Link>
+                        <Link to="/hospitals">Hospitals</Link>
                     </li>
                     <li>
-                        <Link>Service</Link>
+                        <Link to="/about">About Us</Link>
                     </li>
                     <li>
-                        <Link>Contact</Link>
+                        <Link to="/services">Service</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
-                <div className='flex-end flex'>
-                    <span className='icon'>
+
+                {/* Right Side Icons and Button */}
+                <div className="flex-end flex">
+                    <span className="icon">
                         <IoSearch />
                     </span>
-                    <span className='icon'>
+                    <span className="icon">
                         <MdOutlineShoppingCart />
+                        <span className="marker">5</span>
                     </span>
-                    <button className='btn btn-primary'>APPOINTMENT NOW</button>
+                    <button className="btn btn-primary">APPOINTMENT NOW</button>
                 </div>
             </nav>
         </div>
-    )
+    );
 }

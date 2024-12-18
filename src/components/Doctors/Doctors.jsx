@@ -36,54 +36,55 @@ const Doctors = () => {
     ];
 
     return (
-        <div className="doctors-container">
-            {/* Heading */}
-            <div className="header">
-                <p className="subheading"><img src={logo} alt="" /> OUR DOCTOR&apos;S</p>
-                <h1 className="main-heading">Our Special Doctors</h1>
-                <p className="description">
-                    Our team of specialists is at the forefront of medical innovation. Each
-                    specialist brings a unique blend of expertise, empathy, and experience to
-                    ensure that your health is in the best hands:
-                </p>
-            </div>
+        <section className="doctor-wrapper">
+            <div className="doctors-container">
+                {/* Heading */}
+                <div className="header">
+                    <p className="subheading"><img src={logo} alt="" /> OUR DOCTOR&apos;S</p>
+                    <h1 className="main-heading">Our Special Doctors</h1>
+                    <p className="description">
+                        Our team of specialists is at the forefront of medical innovation. Each
+                        specialist brings a unique blend of expertise, empathy, and experience to
+                        ensure that your health is in the best hands:
+                    </p>
+                </div>
 
-            {/* Doctors Cards */}
-            <div className="cards">
-                {doctorsData.map((doctor) => (
-                    <div className="doctor-card" key={doctor.id}>
-                        <img src={doctor.image} alt={doctor.name} className="doctor-img" />
-                        <h3 className="doctor-name">{doctor.name}</h3>
-                        <div className="medicine">
-                            <p className="doctor-specialty">{doctor.specialty}</p>
-                            <div className="rating">
-                                <ReactStars
-                                    count={1}
-                                    size={24}
-                                    edit={false}
-                                    value={1}
-                                />
-                                <span>{doctor.rating}</span> <span style={{ color: 'gray' }}>({doctor.reviews})</span>
+                {/* Doctors Cards */}
+                <div className="cards">
+                    {doctorsData.map((doctor) => (
+                        <div className="doctor-card" key={doctor.id}>
+                            <img src={doctor.image} alt={doctor.name} className="doctor-img" />
+                            <h3 className="doctor-name">{doctor.name}</h3>
+                            <div className="medicine">
+                                <p className="doctor-specialty">{doctor.specialty}</p>
+                                <div className="rating">
+                                    <ReactStars
+                                        count={1}
+                                        size={24}
+                                        edit={false}
+                                        value={1}
+                                    />
+                                    <span>{doctor.rating}</span> <span style={{ color: 'gray' }}>({doctor.reviews})</span>
+                                </div>
+                            </div>
+                            <div className="card-footer">
+                                <p className="patients">{doctor.patients} Patients</p>
+                                <p className="hospital">{doctor.hospital}</p>
                             </div>
                         </div>
-                        <div className="card-footer">
-                            <p className="patients">{doctor.patients} Patients</p>
-                            <p className="hospital">{doctor.hospital}</p>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                {/* Footer */}
+                <div className="explore" >
+                    <p className="section-footer">
+                        You Get Our 100+ More Doctors...{" "}
+                        <a href="#" className="explore-link">
+                            EXPLORE ALL DOCTORS
+                        </a>
+                    </p>
+                </div>
             </div>
-
-            {/* Footer */}
-            <div className="explore" >
-                <p className="section-footer">
-                    You Get Our 100+ More Doctors...{" "}
-                    <a href="#" className="explore-link">
-                        EXPLORE ALL DOCTORS
-                    </a>
-                </p>
-            </div>
-        </div>
+        </section>
     );
 };
 

@@ -2,11 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding: 200px 5rem;
+    padding: 200px 0rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.choose-wrapper {
     background-color: #F3FBFF;
-
-
-
 }
 
 /* Left Text Section */
