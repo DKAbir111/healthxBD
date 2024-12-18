@@ -96,10 +96,6 @@ label {
     align-items: center;
 }
 
-.quote-submit-button:hover {
-    background-color: #0056b3;
-}
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
