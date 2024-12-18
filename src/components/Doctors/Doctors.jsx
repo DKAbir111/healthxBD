@@ -51,7 +51,7 @@ const Doctors = () => {
             {/* Doctors Cards */}
             <div className="cards">
                 {doctorsData.map((doctor) => (
-                    <div className="card" key={doctor.id}>
+                    <div className="doctor-card" key={doctor.id}>
                         <img src={doctor.image} alt={doctor.name} className="doctor-img" />
                         <h3 className="doctor-name">{doctor.name}</h3>
                         <div className="medicine">
